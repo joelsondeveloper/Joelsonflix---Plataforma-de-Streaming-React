@@ -1,0 +1,84 @@
+.hero-carousel {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    overflow: hidden;
+    background: linear-gradient(#0F172A 0%, #1E293B 50%, #0F172A 100%);
+}
+
+.hero-carousel-container {
+    position: relative;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-carousel-item {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    /* padding: 3.125rem 5rem; */
+}
+
+.hero-carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+.hero-carousel-item * {
+    z-index: 1;
+}
+
+.hero-carousel-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1.5rem;
+    margin: 0 auto;
+}
+
+.hero-carousel-info h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-carousel-info p {
+    font-size: 1.125rem;
+    color: #94A3B8;
+}
+
+.hero-carousel-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-carousel-buttons button {
+    padding: .75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hero-carousel-buttons .btn-primary {
+    background-color: #F97316;
+    color: #fff;
+}
+
+.hero-carousel-buttons .btn-secondary {
+    background-color: #334155;
+    color: #fff;
+}

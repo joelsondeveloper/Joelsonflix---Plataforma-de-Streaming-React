@@ -71,6 +71,9 @@
     border: none;
     font-size: 1rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 
 .hero-carousel-buttons .btn-primary {
@@ -81,4 +84,37 @@
 .hero-carousel-buttons .btn-secondary {
     background-color: #334155;
     color: #fff;
+}
+
+.hero-carousel-control {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-carousel-control span {
+    width: .8rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #475569;
+    margin: 0 .25rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-carousel-control span.active {
+    background-color: #F97316;
+    scale: 1.2;
+}
+
+.carousels-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0F172A;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }

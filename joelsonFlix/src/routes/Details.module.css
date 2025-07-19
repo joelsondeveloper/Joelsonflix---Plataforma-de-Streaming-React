@@ -1,0 +1,262 @@
+.details {
+  background-color: #0a0a0f;
+  color: #fff;
+}
+
+.hero_banner {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* padding: 3.75rem 5rem; */
+  display: flex;
+  align-items: end;
+  position: relative;
+}
+
+.hero_banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+.hero_banner * {
+  z-index: 1;
+}
+
+.hero_banner_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: #fff;
+  padding: 0 0 5rem 3.75rem;
+}
+
+.hero_banner_meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero_banner_meta span {
+  background-color: #0ea5e9;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 2px solid #0ea5e9;
+  border-radius: 0.875;
+  text-transform: uppercase;
+}
+
+.hero_banner_meta span:last-child {
+  background-color: #334155;
+  display: flex;
+  gap: 0.375rem;
+}
+
+.hero_banner_meta span:last-child svg {
+  width: 0.875rem;
+  aspect-ratio: 1/1;
+  fill: #f59e0b;
+}
+
+.hero_banner_content h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.hero_banner_date {
+  color: #94a3b8;
+}
+
+.hero_banner_overview {
+  font-size: 1.125;
+  color: #e2e8f0;
+  max-width: 75%;
+}
+
+.hero_banner_buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero_banner_buttons button {
+  padding: 1rem 2rem;
+  border-radius: 1.75rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  background: linear-gradient(75deg, #0ea5e9, #06b6d4);
+  color: #fff;
+  border: 2px solid #0ea5e9;
+}
+
+.hero_banner_buttons button:last-child {
+  background: #1e293b;
+}
+
+.hero_banner_buttons button svg {
+  width: 1.125rem;
+  aspect-ratio: 1/1;
+}
+
+.section_details {
+  display: flex;
+  gap: 1.5rem;
+  padding: 3.75rem 5rem;
+}
+
+.section_details_poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.section_details_poster img {
+  width: 18rem;
+}
+
+.section_details_content {
+  /* max-width: 70%; */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section_details_overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section_details_overview h2 {
+  font-size: 1.5rem;
+}
+
+.section_details_overview p {
+  color: #94a3b8;
+}
+
+.section_details_genres {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section_details_genres ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.section_details_genres li {
+  padding: 0.5rem 1rem;
+  background-color: #1e293b;
+  border-radius: 1rem;
+  border: 1px solid #1e293b;
+}
+
+.section_details_genres li:first-child {
+  border: 1px solid #0ea5e9;
+  color: #0ea5e9;
+}
+
+.section_details_states {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section_details_states h2 {
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #64748b;
+}
+
+.section_details_states p {
+  font-weight: bold;
+}
+
+.section_details_states .green {
+  color: #10b981;
+}
+
+.section_details_states .red {
+  color: #ef4444;
+}
+
+.section_details_states_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section_details_states_row > div,
+.section_details_states_popularity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section_details_states_popularity_bar {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background-color: #1e293b;
+}
+
+.section_details_states_popularity_bar div {
+  height: 100%;
+  background: linear-gradient(#0ea5e9, #06b6d4);
+}
+
+.section_details_states_popularity p {
+  color: #0ea5e9;
+  font-size: 0.875rem;
+}
+
+.section_details_buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.section_details_buttons button {
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 2px solid #0ea5e9;
+  border-radius: 1.75rem;
+  color: #fff;
+  background: #1e293b;
+  color: #0ea5e9;
+}
+
+.section_details_buttons button:first-child {
+  background: linear-gradient(75deg, #0ea5e9, #06b6d4);
+  color: #fff;
+}
+
+.section_details_buttons button:last-child {
+  border: 2px solid transparent;
+  color: #94A3B8;
+}
+
+.section_details_buttons p {
+  font-weight: bold;
+}
+
+.section_details_buttons svg {
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+}

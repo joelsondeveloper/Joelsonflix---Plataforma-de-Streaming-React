@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { getTypeMovies } from "../services/tmbd";
 import { FaPlay, FaInfoCircle } from "react-icons/fa";
 
@@ -13,6 +14,13 @@ const Home = () => {
   const [trendingTv, setTrendingTv] = useState([]);
   const [nowPlaying, setNowPlaying] = useState([]);
   const [topRated, setTopRated] = useState([]);
+
+  const navigate = useNavigate()
+
+  const handleClick = (id, mediaType) => {
+    navigate(`/${mediaType}/${id}`)
+    
+}
 
   useEffect(() => {
     const fetchTrendingMovies = async () => {
@@ -30,11 +38,19 @@ const Home = () => {
     };
     fetchTrendingMovies();
   }, []);
+  
+  const joinAndSuffle = (arrayMovie, arrayTv) => {
+  const withMediaType = [...arrayMovie.map(item => ({
+    ...item,
+    media_type: item.media_type || 'movie'
+  })), 
+  ...arrayTv.map(item => ({
+    ...item,
+    media_type: item.media_type || 'tv'
+  }))];
 
-  const joinAndSuffle = (array1, array2) => {
-    const joinedArray = [...array1, ...array2];
-    return joinedArray.sort(() => Math.random() - 0.5);
-  };
+  return withMediaType.sort(() => Math.random() - 0.5);
+};
 
   const nextSlide = () => {
     setCarouselIndex((prevIndex) => {
@@ -81,11 +97,11 @@ const Home = () => {
                 <h2>{movie.title}</h2>
                 <p>{movie.overview}</p>
                 <div className={styles["hero-carousel-buttons"]}>
-                  <button className={styles["btn-primary"]}>
+                  <button className={styles["btn-primary"]} onClick={() => handleClick(movie.id, movie.media_type)}>
                     <FaPlay />
                     <span>Assistir Agora</span>
                   </button>
-                  <button className={styles["btn-secondary"]}>
+                  <button className={styles["btn-secondary"]} onClick={() => handleClick(movie.id, movie.media_type)}>
                     <FaInfoCircle />
                     <span>Ver Mais</span>
                   </button>
@@ -115,8 +131,9 @@ const Home = () => {
           itemData={nowPlaying}
           title="Lançados rencentemente"
           qtdItens={15}
+          isMovieAndTv={true}
         />
-        <Carousel itemData={topRated} title="Top 15" qtdItens={15} />
+        <Carousel itemData={topRated} title="Top 15" qtdItens={15} isMovieAndTv={true} />
       </div>
     </>
   );

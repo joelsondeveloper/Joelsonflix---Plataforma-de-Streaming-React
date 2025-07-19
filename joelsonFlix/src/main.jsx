@@ -6,6 +6,7 @@ import App from './App.jsx'
 
 // paginas
 import Home from './routes/Home.jsx'
+import Details from './routes/Details.jsx'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/:mediaType/:id',
+        element: <Details />,
       },
     ],
   },

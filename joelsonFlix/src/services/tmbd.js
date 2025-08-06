@@ -10,10 +10,6 @@ const BASE_URL = "https://api.themoviedb.org/3";
 // }
 
 export async function getTypeMovies(url) {
-  const fullUrl = `${BASE_URL}${
-    url.startsWith("/") ? url : "/" + url
-  }?api_key=${API_KEY}&language=pt-BR`;
-  console.log("📡 Fetching:", fullUrl);
   const response = await fetch(
     `${BASE_URL}${url}?api_key=${API_KEY}&language=pt-BR`
   );

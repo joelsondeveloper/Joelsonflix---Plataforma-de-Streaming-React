@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 import styles from "./Carousel.module.css";
 
+
+
 const carousel = ({ itemData, title, qtdItens, isMovieAndTv }) => {
   const [carouselTranslation, setCarouselTranslation] = useState(0);
 

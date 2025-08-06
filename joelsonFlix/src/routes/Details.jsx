@@ -123,12 +123,12 @@ const Details = () => {
           </div>
         </div>
       </section>
-      <Carousel
+      {/* <Carousel
         itemData={nowPlaying}
         title="Lançados rencentemente"
         qtdItens={15}
         isMovieAndTv={true}
-      />
+      /> */}
     </div>
   );
 };
